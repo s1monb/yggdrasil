@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://helm.cilium.io/cilium
+    repoURL: https://helm.cilium.io/
     targetRevision: 1.18.0
     chart: cilium
     helm:
@@ -20,5 +20,5 @@ spec:
       allowEmpty: true
       selfHeal: true
     syncOptions:
-      - allowEmpty=true
+      - allowEmpty=false
       - CreateNamespace=true
