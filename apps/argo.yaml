@@ -8,3 +8,6 @@ spec:
   source:
     repoURL: https://argoproj.github.io/argo-helm
     chart: argo
+  destination:
+    name: in-cluster
+    namespace: argocd
