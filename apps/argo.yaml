@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://argoproj.github.io/argo-helm
-    targetRevision: v3.1.9
+    targetRevision: 3.1.9
     chart: argo
   destination:
     name: in-cluster
