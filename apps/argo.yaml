@@ -12,3 +12,10 @@ spec:
   destination:
     name: in-cluster
     namespace: argocd
+  syncPolicy:
+    automated:
+      allowEmpty: true
+      selfHeal: true
+    syncOptions:
+      - allowEmpty=true
+      - CreateNamespace=true
