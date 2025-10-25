@@ -12,6 +12,9 @@ spec:
     path: apps
     repoURL: https://github.com/s1monb/yggdrasil
     targetRevision: HEAD
+    directory:
+      recurse: true
+    
   syncPolicy:
     automated:
       allowEmpty: true
