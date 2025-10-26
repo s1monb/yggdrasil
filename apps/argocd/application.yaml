@@ -21,15 +21,6 @@ spec:
               traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
               traefik.ingress.kubernetes.io/router.tls: "true"
               cert-manager.io/cluster-issuer: "letsencrypt-production"
-          ingressGrpc:
-            enabled: true
-            ingressClassName: traefik
-            hostname: argo.valley.no
-            tls: true
-            annotations:
-              traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
-              traefik.ingress.kubernetes.io/router.tls: "true"
-              cert-manager.io/cluster-issuer: "letsencrypt-production"
   destination:
     name: in-cluster
     namespace: argocd
