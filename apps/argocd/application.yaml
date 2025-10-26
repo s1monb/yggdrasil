@@ -14,28 +14,18 @@ spec:
         server:
           ingress:
             enabled: true
-            className: traefik
-            hosts:
-              - argo.valley.no
-            tls:
-              - secretName: argo-tls
-                hosts:
-                  - argo.valley.no
-            https: true
+            ingressClassName: traefik
+            hostname: argo.valley.no
+            tls: true
             annotations:
               traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
               traefik.ingress.kubernetes.io/router.tls: "true"
               cert-manager.io/cluster-issuer: "letsencrypt-production"
-          ingressGRPC:
+          ingressGrpc:
             enabled: true
-            className: traefik
-            hosts:
-              - argo.valley.no
-            tls:
-              - secretName: argo-tls
-                hosts:
-                  - argo.valley.no
-            https: true
+            ingressClassName: traefik
+            hostname: argo.valley.no
+            tls: true
             annotations:
               traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
               traefik.ingress.kubernetes.io/router.tls: "true"
