@@ -10,7 +10,7 @@ spec:
     targetRevision: 9.0.5
     chart: argo-cd
     helm:
-      valuesObject:
+      values: |
         application.namespaces: "*"
         server:
           ingress:
