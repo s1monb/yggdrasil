@@ -10,7 +10,7 @@ spec:
     targetRevision: 9.0.4
     chart: argo-cd
     helm:
-      values: |
+      valuesObject:
         server:
           ingress:
             enabled: true
