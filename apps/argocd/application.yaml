@@ -9,6 +9,13 @@ spec:
     repoURL: https://argoproj.github.io/argo-helm
     targetRevision: 9.0.5
     chart: argo-cd
+    helm:
+      values: |
+        server:
+          ingress:
+            enabled: false
+          ingressGrpc:
+            enabled: false
   destination:
     name: in-cluster
     namespace: argocd
