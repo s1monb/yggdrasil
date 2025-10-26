@@ -18,9 +18,9 @@ spec:
             hosts:
               - argo.valley.no
             tls:
-              - secretName: nginx-tls
+              - secretName: argo-tls
                 hosts:
-                  - nginx.valley.no
+                  - aggo.valley.no
             https: true
             annotations:
               traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
