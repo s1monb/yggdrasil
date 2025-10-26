@@ -10,8 +10,22 @@ spec:
     targetRevision: 9.0.5
     chart: argo-cd
     helm:
-      valueFiles:
-        - values.yaml
+      valuesObject:
+        application.namespaces: "*"
+        server:
+          ingress:
+            enabled: true
+            hosts:
+              - argo.valley.no
+            tls:
+              - secretName: nginx-tls
+                hosts:
+                  - nginx.valley.no
+            https: true
+            annotations:
+              traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
+              traefik.ingress.kubernetes.io/router.tls: "true"
+              cert-manager.io/cluster-issuer: "letsencrypt-production"
   destination:
     name: in-cluster
     namespace: argocd
