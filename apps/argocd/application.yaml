@@ -5,17 +5,16 @@ metadata:
   namespace: argocd
 spec:
   project: default
-  source:
-    repoURL: https://argoproj.github.io/argo-helm
-    targetRevision: 9.0.5
-    chart: argo-cd
-    helm:
-      values: |
-        server:
-          ingress:
-            enabled: false
-          ingressGrpc:
-            enabled: false
+  sources:
+    - repoURL: https://argoproj.github.io/argo-helm
+      targetRevision: 9.0.5
+      chart: argo-cd
+      helm:
+        valueFiles:
+          - $values/apps/argocd/values.yaml
+    - repoURL: 'https://github.com/s1monb/yggdrasil'
+      targetRevision: HEAD
+      ref: values
   destination:
     name: in-cluster
     namespace: argocd
