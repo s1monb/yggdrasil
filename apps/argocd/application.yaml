@@ -11,7 +11,6 @@ spec:
     chart: argo-cd
     helm:
       values: |
-        application.namespaces: "*"
         server:
           ingress:
             enabled: true
@@ -20,7 +19,7 @@ spec:
             tls:
               - secretName: argo-tls
                 hosts:
-                  - aggo.valley.no
+                  - argo.valley.no
             https: true
             annotations:
               traefik.ingress.kubernetes.io/router.entrypoints: web,websecure
