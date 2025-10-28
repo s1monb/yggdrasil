@@ -9,7 +9,7 @@ spec:
         repoURL: https://github.com/s1monb/yggdrasil
         revision: HEAD
         directories:
-          - path: apps/infra
+          - path: apps/infra/*
   template:
     metadata:
       name: '{{ path.basename }}'
