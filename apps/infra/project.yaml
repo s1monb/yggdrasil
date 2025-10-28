@@ -13,6 +13,8 @@ spec:
       server: '*'
     - namespace: 'cilium-secrets'
       server: '*'
+    - namespace: 'longhorn-system'
+      server: '*'
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
