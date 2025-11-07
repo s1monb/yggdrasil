@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hugo
+  name: mimir
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hugo
+      app: mimir
   template:
     metadata:
       labels:
-        app: hugo
+        app: mimir
     spec:
       containers:
-      - name: hugo
+      - name: mimir
         image: ghcr.io/s1monb/mimir:latest
         ports:
-        - containerPort: 1313
+        - containerPort: mimir
 

@@ -1,7 +1,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: hugo
+  name: mimir
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
@@ -17,7 +17,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: hugo
+            name: mimir
             port:
               number: 80
 
