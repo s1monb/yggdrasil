@@ -5,6 +5,10 @@ metadata:
   annotations:
     cert-manager.io/cluster-issuer: "letsencrypt-production"
 spec:
+  tls:
+    - secretName: mimir-tls
+      hosts:
+        - mimir.valley.no
   rules:
   - host: mimir.valley.no
     http:
