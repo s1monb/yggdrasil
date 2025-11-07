@@ -16,5 +16,5 @@ spec:
       - name: mimir
         image: ghcr.io/s1monb/mimir:latest
         ports:
-        - containerPort: mimir
+        - containerPort: 80
 
