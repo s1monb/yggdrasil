@@ -1,0 +1,28 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: apps
+  namespace: argocd
+spec:
+  generators:
+    - git:
+        repoURL: https://github.com/s1monb/yggdrasil
+        revision: HEAD
+        directories:
+          - path: apps/apps/*
+  template:
+    metadata:
+      name: '{{ path.basename }}'
+    spec:
+      project: apps
+      source:
+        repoURL: https://github.com/s1monb/yggdrasil
+        targetRevision: HEAD
+        path: '{{ path }}'
+      destination:
+        name: in-cluster
+        namespace: argocd
+      syncPolicy:
+        automated:
+          selfHeal: true
+          prune: true
