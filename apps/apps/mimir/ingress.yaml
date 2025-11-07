@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: mimir
   annotations:
-    cert-manager.io/cluster-issuer: "letsencrypt-production"
+    cert-manager.io/cluster-issuer: "letsencrypt-staging"
 spec:
   tls:
     - secretName: mimir-tls
