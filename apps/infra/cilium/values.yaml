@@ -13,6 +13,7 @@ l2announcements:
 
 ingressController:
   enabled: true
+  default: true
 
 securityContext:
   capabilities:
