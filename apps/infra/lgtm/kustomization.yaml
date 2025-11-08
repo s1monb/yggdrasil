@@ -5,6 +5,6 @@ helmCharts:
   - name: grafana
     repo: https://grafana.github.io/helm-charts
     version: 3.0.1
-    namespace: lgmt
+    namespace: lgtm
     releaseName: "lgtm-distributed"
     valuesFile: values.yaml
