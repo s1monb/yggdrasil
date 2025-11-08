@@ -4,6 +4,6 @@ kind: Kustomization
 helmCharts:
   - name: lgtm
     repo: https://grafana.github.io/helm-charts
-    version: 9.0.5
+    version: 3.0.1
     releaseName: "lgtm-distributed"
     valuesFile: values.yaml
