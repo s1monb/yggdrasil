@@ -17,6 +17,8 @@ spec:
       server: '*'
     - namespace: 'cert-manager'
       server: '*'
+    - namespace: 'lgtm'
+      server: '*'
   clusterResourceWhitelist:
     - group: '*'
       kind: '*'
