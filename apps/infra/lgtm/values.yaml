@@ -2,6 +2,8 @@ grafana:
   # -- Deploy Grafana if enabled. See [upstream readme](https://github.com/grafana/helm-charts/tree/main/charts/grafana#configuration) for full values reference.
   enabled: true
 
+  namespaceOverride: lgtm
+
   # -- Grafana data sources config. Connects to all three by default
   datasources:
     datasources.yaml:
@@ -40,10 +42,14 @@ loki:
   # -- Deploy Loki if enabled. See [upstream readme](https://github.com/grafana/helm-charts/tree/main/charts/loki-distributed#values) for full values reference.
   enabled: true
 
+  namespaceOverride: lgtm
 # -- Mimir chart values. Resources are set to a minimum by default.
 mimir:
   # -- Deploy Mimir if enabled. See [upstream values.yaml](https://github.com/grafana/mimir/blob/main/operations/helm/charts/mimir-distributed/values.yaml) for full values reference.
   enabled: true
+
+  namespaceOverride: lgtm
+
   alertmanager:
     resources:
       requests:
@@ -103,6 +109,9 @@ mimir:
 tempo:
   # -- Deploy Tempo if enabled.  See [upstream readme](https://github.com/grafana/helm-charts/blob/main/charts/tempo-distributed/README.md#values) for full values reference.
   enabled: true
+
+  namespaceOverride: lgtm
+
   ingester:
     replicas: 1
 
