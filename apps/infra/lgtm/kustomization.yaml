@@ -2,7 +2,7 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 helmCharts:
-  - name: granfana
+  - name: grafana
     repo: https://grafana.github.io/helm-charts
     version: 3.0.1
     namespace: lgmt
