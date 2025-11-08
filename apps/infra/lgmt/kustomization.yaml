@@ -1,0 +1,9 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+helmCharts:
+  - name: lgtm
+    repo: https://grafana.github.io/helm-charts
+    version: 9.0.5
+    releaseName: "lgtm-distributed"
+    valuesFile: values.yaml
